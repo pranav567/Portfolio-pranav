@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <React.Fragment>
       {windowSize > 700 ? (
-        <div className="home-div">
+        <div className="home-container">
           <div className="left-box">
             <svg
               className="code-svg"
@@ -46,7 +46,7 @@ const Home = () => {
           </div>
         </div>
       ) : (
-        <div className="home-div-sm">
+        <div className="home-container-sm">
           <div className="box-sm">
             <div className="name-header-sm">
               I'm{" "}

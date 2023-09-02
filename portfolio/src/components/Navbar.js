@@ -55,6 +55,7 @@ const Navbar = () => {
                   className="path-no-animation"
                   d="M63.059428,110.051357L178.246515,70.432869L150,150l-48.055759,18.011739-24.944975,71.90022h37.417462l22.743947-63.096112l17.608217,62.362436l35.216434-119.589141l35.216435-14.673515"
                   fill="none"
+                  stroke="white"
                   stroke-width="20"
                   stroke-dasharray="665.773079"
                 />
@@ -66,6 +67,7 @@ const Navbar = () => {
             className={
               windowSize > 900 ? "other-headers" : "other-headers sm-font"
             }
+            // style={{ color: "#252525" }}
           >
             <p>About</p>
             <p>Experience</p>
