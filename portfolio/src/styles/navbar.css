@@ -56,7 +56,6 @@ styles for navbar
 .path-no-animation {
   stroke-dasharray: 665.773079;
   stroke-dashoffset: 0;
-  stroke: white;
   animation: none;
   transition: ease 1s;
 }

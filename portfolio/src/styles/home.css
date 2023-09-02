@@ -2,8 +2,8 @@
 home page css
 */
 
-.home-div,
-.home-div-sm {
+.home-container,
+.home-container-sm {
   user-select: none;
   position: relative;
   width: 100%;
@@ -13,7 +13,7 @@ home page css
   align-items: center;
   overflow: hidden;
 }
-.home-div-sm {
+.home-container-sm {
   position: relative;
   top: 0;
   background: transparent;
