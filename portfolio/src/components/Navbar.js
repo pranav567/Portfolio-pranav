@@ -68,7 +68,6 @@ const Navbar = React.forwardRef(
         if (scrollToContact.current)
           scrollToContact.current.scrollIntoView({ behavior: "smooth" });
       }
-      handleHamburgurToggle();
     };
 
     const handleResumeDownload = () => {
@@ -187,6 +186,7 @@ const Navbar = React.forwardRef(
               <p
                 onClick={() => {
                   handleScrollTo("about");
+                  handleHamburgurToggle();
                 }}
               >
                 About
@@ -194,6 +194,7 @@ const Navbar = React.forwardRef(
               <p
                 onClick={() => {
                   handleScrollTo("experience");
+                  handleHamburgurToggle();
                 }}
               >
                 Experience
@@ -201,6 +202,7 @@ const Navbar = React.forwardRef(
               <p
                 onClick={() => {
                   handleScrollTo("projects");
+                  handleHamburgurToggle();
                 }}
               >
                 Projects
@@ -208,12 +210,16 @@ const Navbar = React.forwardRef(
               <p
                 onClick={() => {
                   handleScrollTo("contact");
+                  handleHamburgurToggle();
                 }}
               >
                 Contact
               </p>
               <p
-                onClick={handleResumeDownload}
+                onClick={() => {
+                  handleResumeDownload();
+                  handleHamburgurToggle();
+                }}
                 style={{
                   display: "flex",
                   justifyContent: "flex-start",
