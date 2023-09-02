@@ -35,8 +35,8 @@ styles for navbar
   position: absolute;
   top: 50%;
   left: 10%;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   transform: translate(-50%, -50%);
   background: transparent;
   transition: ease 1s;
@@ -44,11 +44,13 @@ styles for navbar
 }
 .logo-img-sm {
   left: 15%;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  transition: ease 1s;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.logo-img:hover,
-.logo-img-sm {
+.logo-img:hover {
   transition: ease 1s;
   border-radius: 50%;
   cursor: pointer;
@@ -166,8 +168,6 @@ styles for navbar
 .bar-3-toggled {
   top: 50%;
   transform: translateY(-50%) rotateZ(-45deg);
-  /* background-color: #e7cfaf; */
-  /* border: 0.5px solid #ff4d4d; */
 }
 
 .dropdown {

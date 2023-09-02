@@ -158,10 +158,9 @@
 .button-hover-cover {
   height: 50px;
   z-index: 1;
-  background-color: white; /* margin: 20px; */
+  background-color: white;
   margin-top: -72px;
   width: 0px;
-  /* border: 2px solid #ff4d4d; */
   border-left: 0;
   border-right: 0;
   transition: ease 500ms;
@@ -242,5 +241,3 @@
   color: white;
   background: radial-gradient(circle, #252525 65%, white 65%, white 100%);
 }
-
-/* #0072b1 */
