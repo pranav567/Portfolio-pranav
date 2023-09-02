@@ -20,6 +20,7 @@ styles for navbar
 }
 .navbar-sm {
   background-color: #252525ee;
+  height: 50px;
 }
 
 .logo {
@@ -43,6 +44,8 @@ styles for navbar
 }
 .logo-img-sm {
   left: 15%;
+  width: 50px;
+  height: 50px;
 }
 .logo-img:hover,
 .logo-img-sm {
@@ -145,10 +148,10 @@ styles for navbar
 }
 
 .bar-1 {
-  top: 40%;
+  top: 35%;
 }
 .bar-3 {
-  top: 60%;
+  top: 65%;
 }
 
 .bar-1-toggled {
@@ -183,6 +186,7 @@ styles for navbar
   left: 10%;
   width: 80%;
   text-align: left;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   cursor: pointer;
   transition: ease 1ms;
