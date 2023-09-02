@@ -79,7 +79,7 @@ const Landing = () => {
         <Experience ref={experienceRef} />
         <Projects ref={projectsRef} />
         <Contact ref={contactRef} />
-        <Footer />
+        <Footer scrollToHome={homeRef} />
       </div>
     </React.Fragment>
   );
