@@ -96,6 +96,9 @@ styles for navbar
   align-items: center;
   color: white;
 }
+.sm-font {
+  font-size: 1.2rem;
+}
 .other-headers-sm {
   position: absolute;
   left: 80%;

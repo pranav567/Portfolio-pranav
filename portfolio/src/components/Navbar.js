@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import { FiDownload } from "react-icons/fi";
 import "../styles/navbar.css";
+
+import resume from "../assets/pdf/resume.pdf";
 
 const Navbar = React.forwardRef(
   (
@@ -68,6 +71,10 @@ const Navbar = React.forwardRef(
       handleHamburgurToggle();
     };
 
+    const handleResumeDownload = () => {
+      window.open(resume, "_blank", "noopener,noreferrer");
+    };
+
     return (
       <React.Fragment>
         {windowSize > 700 ? (
@@ -99,7 +106,12 @@ const Navbar = React.forwardRef(
                 </svg>
               </div>
             </div>
-            <div className="other-headers" style={{ color: `${colorSet}` }}>
+            <div
+              className={
+                windowSize > 800 ? "other-headers" : "other-headers sm-font"
+              }
+              style={{ color: `${colorSet}` }}
+            >
               <p
                 onClick={() => {
                   handleScrollTo("about");
@@ -127,6 +139,16 @@ const Navbar = React.forwardRef(
                 }}
               >
                 Contact
+              </p>
+              <p
+                onClick={handleResumeDownload}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                }}
+              >
+                Resume <FiDownload style={{ marginLeft: "5px" }} />
               </p>
             </div>
           </div>
@@ -190,6 +212,16 @@ const Navbar = React.forwardRef(
                 }}
               >
                 Contact
+              </p>
+              <p
+                onClick={handleResumeDownload}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                }}
+              >
+                Resume <FiDownload style={{ marginLeft: "5px" }} />
               </p>
             </div>
           </div>
