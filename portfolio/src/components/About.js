@@ -42,7 +42,7 @@ const About = React.forwardRef((props, ref) => {
               </p>
             </div>
 
-            <div className="about-summary" style={{ marginBottom: "50px" }}>
+            <div className="about-summary" style={{ marginBottom: "40px" }}>
               <p>
                 Apart from coding &#x1F4BB;, I spend my time playing badminton
                 &#x1F3F8; , reading Crime Fiction books &#x1F4D6; or watching
@@ -75,7 +75,7 @@ const About = React.forwardRef((props, ref) => {
               </p>
             </div>
 
-            <div className="about-summary-sm" style={{ marginBottom: "100px" }}>
+            <div className="about-summary-sm" style={{ marginBottom: "40px" }}>
               <p>
                 Apart from coding &#x1F4BB;, I spend my time playing badminton
                 &#x1F3F8; , reading Crime Fiction books &#x1F4D6; or watching

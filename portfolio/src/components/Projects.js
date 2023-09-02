@@ -53,7 +53,7 @@ const Projects = React.forwardRef((props, ref) => {
       title: "Expense Management App",
       svg: expense,
       about:
-        "A mobile application, where the user can add his/her transactions. It has an option to add different cards used by the user to make payments. Add recurring transactions with a single click",
+        "A mobile application, where the user can add his/her transactions. It has an option to add different cards used by the user to make payments to track their balance. Add recurring transactions with a single click instead of filling form again.",
       stack: "React native, sqlite",
     },
     movie: {
@@ -308,7 +308,9 @@ const Projects = React.forwardRef((props, ref) => {
                     }
                   }}
                   style={
-                    projectCurrent > 0 ? { opacity: "1" } : { opacity: "0" }
+                    projectCurrent > 0
+                      ? { opacity: "1" }
+                      : { opacity: "0.3", cursor: "none" }
                   }
                 />
               </div>
@@ -324,7 +326,9 @@ const Projects = React.forwardRef((props, ref) => {
                     }
                   }}
                   style={
-                    projectCurrent < 3 ? { opacity: "1" } : { opacity: "0" }
+                    projectCurrent < 3
+                      ? { opacity: "1" }
+                      : { opacity: "0.3", cursor: "none" }
                   }
                 />
               </div>
