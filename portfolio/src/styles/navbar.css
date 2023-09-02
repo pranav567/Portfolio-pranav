@@ -20,7 +20,7 @@ styles for navbar
 }
 .navbar-sm {
   background-color: #252525ee;
-  height: 50px;
+  height: 60px;
 }
 
 .logo {
@@ -44,8 +44,8 @@ styles for navbar
 }
 .logo-img-sm {
   left: 15%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 .logo-img:hover,
 .logo-img-sm {

@@ -350,7 +350,7 @@ const Projects = () => {
                   </div>
                   <div
                     className="project-details"
-                    style={{ fontSize: "0.8rem" }}
+                    style={windowSize > 450 ? {} : { fontSize: "0.8rem" }}
                   >
                     <div className="project-about">
                       <span>About : </span>

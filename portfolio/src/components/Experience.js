@@ -6,7 +6,7 @@ const Experience = () => {
   const workExp = [
     {
       companyName: "Cpiombo Servtec Private Limited",
-      duration: "Jan, 2023 - current",
+      duration: "Jan, 2023 - present",
       role: "Mern stack developer-intern",
       responsibility: [
         "Utilized Whimsical, a collaborative tool, to create comprehensive workflows and flowcharts, facilitating effective communication within the team.",
