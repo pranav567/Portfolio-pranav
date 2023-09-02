@@ -1,0 +1,380 @@
+.exp-container {
+  user-select: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ecd9bf;
+}
+
+.exp-header,
+.exp-header-sm {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: #ff4d4d;
+  font-family: TulpenOne;
+  letter-spacing: 5px;
+  font-weight: bold;
+  overflow: hidden;
+  animation: headerExp 3s ease;
+}
+.exp-header-sm {
+  margin-top: 70px;
+  font-size: 2.5rem;
+}
+
+@keyframes headerExp {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.exp-content-container,
+.exp-content-container-md,
+.exp-content-container-sm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.exp-content-container-md,
+.exp-content-container-sm {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.exp-content-container-sm {
+  margin-top: 20px;
+}
+
+.exp-left-box,
+.exp-right-box,
+.exp-left-box-md,
+.exp-right-box-md {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.exp-left-box-md,
+.exp-right-box-md {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.box-header,
+.box-header-sm {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 2rem;
+  color: #252525;
+  font-family: Teko;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px white;
+  margin-bottom: 20px;
+}
+.box-header-sm {
+  font-size: 1.5rem;
+}
+.work-container {
+  width: 100%;
+  height: 400px;
+}
+.work {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.workStick-box {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.stick {
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.work-circle {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff4d4d;
+  border: 0.5px solid white;
+  transform: translateX(-7px) scale(1.2, 1.2);
+}
+
+.content-box {
+  margin-left: 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.company-name,
+.company-name-sm {
+  font-size: 1.3rem;
+  color: #ff4d4d;
+  font-family: Teko;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.company-name-sm {
+  font-size: 1rem;
+}
+.company-role,
+.company-role-sm {
+  margin-top: 2px;
+  font-size: 1.2rem;
+  color: #252525;
+  font-family: Teko;
+  letter-spacing: 1px;
+}
+.company-role-sm {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+.company-duration,
+.company-duration-sm {
+  margin-top: 2px;
+  font-size: 1.2rem;
+  color: #252525;
+  font-family: Teko;
+  letter-spacing: 1px;
+}
+.company-duration-sm {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+.company-responsibility,
+.company-responsibility-sm {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #252525;
+  font-family: Teko;
+  letter-spacing: 1px;
+}
+.company-responsibility-sm {
+  margin-top: 8px;
+  font-size: 0.7rem;
+}
+.company-responsibility > ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+.company-responsibility-sm > ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 12px;
+}
+
+.exp-right-box {
+  /* background-color: #ff4d4d; */
+  height: 460px;
+}
+
+.logo-skills {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.html-logo,
+.css-logo,
+.js-logo,
+.py-logo,
+.mysql-logo,
+.react-logo,
+.node-logo,
+.mongo-logo,
+.react-native-logo,
+.figma-logo,
+.git-logo,
+.vscode-logo {
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+}
+.html-logo-sm,
+.css-logo-sm,
+.js-logo-sm,
+.py-logo-sm,
+.mysql-logo-sm,
+.react-logo-sm,
+.node-logo-sm,
+.mongo-logo-sm,
+.react-native-logo-sm,
+.figma-logo-sm,
+.git-logo-sm,
+.vscode-logo-sm {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+}
+
+.html-path-1,
+.css-path-1,
+.js-path-1,
+.py-path-1,
+.mysql-path-1,
+.react-path-1,
+.node-path-1,
+.mongo-path-1,
+.react-native-path-1,
+.git-path-1 {
+  fill: #3d3d3d;
+  transition: ease 100ms;
+  opacity: 0.7;
+}
+.html-path-2,
+.css-path-2,
+.js-path-2,
+.py-path-2,
+.mysql-path-2,
+.mongo-path-2,
+.figma-path-1,
+.figma-path-2,
+.figma-path-3,
+.figma-path-4,
+.figma-path-5,
+.vscode-path-1,
+.vscode-path-2,
+.vscode-path-3,
+.vscode-path-4 {
+  fill: #525252;
+  transition: ease 100ms;
+  opacity: 0.7;
+}
+.html-logo:hover .html-path-1,
+.html-path-1-color {
+  fill: #e44d26;
+}
+.html-logo:hover .html-path-2,
+.html-path-2-color {
+  fill: #f16529;
+}
+.css-logo:hover .css-path-1,
+.css-path-1-color {
+  fill: #264de4;
+}
+.css-logo:hover .css-path-2,
+.css-path-2-color {
+  fill: #2965f1;
+}
+.js-logo:hover .js-path-1,
+.js-path-1-color {
+  fill: #e9c932;
+}
+.js-logo:hover .js-path-2,
+.js-path-2-color {
+  fill: #fedc24;
+}
+.py-logo:hover .py-path-1,
+.py-path-1-color {
+  fill: #2f6d9e;
+}
+.py-logo:hover .py-path-2,
+.py-path-2-color {
+  fill: #ffd841;
+}
+.mysql-logo:hover .mysql-path-1,
+.mysql-path-1-color {
+  fill: #005c87;
+}
+.mysql-logo:hover .mysql-path-2,
+.mysql-path-2-color {
+  fill: #e4830f;
+}
+.react-logo:hover .react-path-1,
+.react-path-1-color {
+  fill: #18bfed;
+}
+.node-logo:hover .node-path-1,
+.node-path-1-color {
+  fill: #8cc84b;
+}
+.mongo-logo:hover .mongo-path-2,
+.mongo-path-2-color {
+  fill: #6cac48;
+}
+.mongo-logo:hover .mongo-path-1,
+.mongo-path-1-color {
+  fill: #599636;
+}
+.react-native-logo:hover .react-native-path-1,
+.react-native-path-1-color {
+  fill: #18bfed;
+}
+.figma-logo:hover .figma-path-1,
+.figma-path-1-color {
+  fill: #1abcfe;
+}
+.figma-logo:hover .figma-path-2,
+.figma-path-2-color {
+  fill: #0acf83;
+}
+.figma-logo:hover .figma-path-3,
+.figma-path-3-color {
+  fill: #ff7262;
+}
+.figma-logo:hover .figma-path-4,
+.figma-path-4-color {
+  fill: #f24e1e;
+}
+.figma-logo:hover .figma-path-5,
+.figma-path-5-color {
+  fill: #a259ff;
+}
+.git-logo:hover .git-path-1,
+.git-path-1-color {
+  fill: #de4c36;
+}
+.vscode-logo:hover .vscode-path-1,
+.vscode-path-1-color {
+  fill: #2489ca;
+}
+.vscode-logo:hover .vscode-path-2,
+.vscode-path-2-color {
+  fill: #1070b3;
+}
+.vscode-logo:hover .vscode-path-3,
+.vscode-path-3-color {
+  fill: #0877b9;
+}
+.vscode-logo:hover .vscode-path-4,
+.vscode-path-4-color {
+  fill: #3c99d4;
+}
