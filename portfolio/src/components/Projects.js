@@ -4,9 +4,9 @@ import "../styles/projects.css";
 import { InView } from "react-intersection-observer";
 
 import expense from "../assets/svg/expense.svg";
-import movie from "../assets/svg/movie.svg";
+import movie from "../assets/images/moviePng.png";
 import blackjack from "../assets/svg/blackjack.svg";
-import license from "../assets/svg/license.svg";
+import license from "../assets/images/licensePng.png";
 
 const Projects = React.forwardRef((props, ref) => {
   const [windowSize, setwindowSize] = useState(window.innerWidth);
@@ -188,8 +188,12 @@ const Projects = React.forwardRef((props, ref) => {
                     >
                       <div className="project-svg">
                         <object
-                          aria-label="Immage"
-                          type="image/svg+xml"
+                          aria-label="Image"
+                          type={
+                            ind === 1 || ind === 2
+                              ? "image/png"
+                              : "image/svg+xml"
+                          }
                           data={projects[obj]["svg"]}
                         ></object>
                       </div>
@@ -294,8 +298,10 @@ const Projects = React.forwardRef((props, ref) => {
                 >
                   <div className="project-svg-md">
                     <object
-                      aria-label="Immage"
-                      type="image/svg+xml"
+                      aria-label="Image"
+                      type={
+                        ind === 1 || ind === 2 ? "image/png" : "image/svg+xml"
+                      }
                       data={projects[obj]["svg"]}
                     ></object>
                   </div>
@@ -364,8 +370,10 @@ const Projects = React.forwardRef((props, ref) => {
                 >
                   <div className="project-svg-sm">
                     <object
-                      aria-label="Immage"
-                      type="image/svg+xml"
+                      aria-label="Image"
+                      type={
+                        ind === 1 || ind === 2 ? "image/png" : "image/svg+xml"
+                      }
                       data={projects[obj]["svg"]}
                     ></object>
                   </div>

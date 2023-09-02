@@ -69,7 +69,7 @@ const About = React.forwardRef((props, ref) => {
                   Sardar Patel Institute of Technology
                 </a>{" "}
                 in Computer Engineering. I am keen on building a career that
-                will help me, apply my skills and also learn new skills while
+                will help me, apply my skills and also upskill while
                 contributing to dynamic development teams and drive impactful
                 solutions.
               </p>
