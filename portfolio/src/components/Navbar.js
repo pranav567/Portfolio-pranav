@@ -20,34 +20,6 @@ const Navbar = () => {
     };
   }, [windowSize]);
 
-  useEffect(() => {
-    const moveCircle = (e) => {
-      if (window.innerWidth > 700) {
-        circleRef.current.style.top = `${e.clientY - 30}px`;
-        circleRef.current.style.left = `${e.clientX - 30}px`;
-
-        if (bgNavbarRef.current) {
-          const navbarCords = bgNavbarRef.current.getBoundingClientRect();
-          if (
-            navbarCords.top <= e.clientY &&
-            navbarCords.bottom >= e.clientY &&
-            navbarCords.left <= e.clientX &&
-            navbarCords.right >= e.clientX
-          ) {
-            circleRef.current.classList = "";
-            circleRef.current.classList.add("circle");
-          } else {
-            circleRef.current.classList = "";
-            circleRef.current.classList.add("circle-no-display");
-          }
-        }
-      }
-    };
-    window.addEventListener("mousemove", moveCircle);
-    return () => {
-      window.removeEventListener("mousemove", moveCircle);
-    };
-  }, []);
   const handleHamburgurToggle = () => {
     const bar1 = document.querySelector(".bar-1");
     const bar2 = document.querySelector(".bar-2");
@@ -68,9 +40,6 @@ const Navbar = () => {
   };
   return (
     <React.Fragment>
-      <div className="circle-bg">
-        <div ref={circleRef} className="circle-no-display" />
-      </div>
       {windowSize > 700 ? (
         <div ref={bgNavbarRef} className="navbar">
           <div className="logo">
@@ -133,18 +102,10 @@ const Navbar = () => {
             <div className="coverHam" onClick={handleHamburgurToggle} />
           </div>
           <div ref={dropdownRef} className="dropdown">
-            <p>
-              <a href="#">About</a>
-            </p>
-            <p>
-              <a href="#">Experience</a>
-            </p>
-            <p>
-              <a href="#">Projects</a>
-            </p>
-            <p>
-              <a href="/contact-me">Contact</a>
-            </p>
+            <p>About</p>
+            <p>Experience</p>
+            <p>Projects</p>
+            <p>Contact</p>
           </div>
         </div>
       )}

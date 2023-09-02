@@ -2,37 +2,10 @@
 styles for navbar 
 */
 
-.circle-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  overflow: hidden;
-  background: transparent;
-}
-
-.circle {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  z-index: 0;
-  border-radius: 50%;
-  background-color: #ecd9bf;
-  opacity: 0.5;
-  backdrop-filter: blur(10px);
-}
-.circle-no-display {
-  visibility: hidden;
-}
-
 .navbar,
 .navbar-sm {
   user-select: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -42,14 +15,11 @@ styles for navbar
   align-items: center;
   height: 80px;
   z-index: 3;
-}
-.navbar-sm {
   background-color: transparent;
   backdrop-filter: blur(2px);
 }
-
-.navbar:hover {
-  cursor: none;
+.navbar-sm {
+  background-color: #252525ee;
 }
 
 .logo {
@@ -144,6 +114,7 @@ styles for navbar
 }
 
 .other-headers > p:hover {
+  cursor: pointer;
   color: #ff4d4d;
   transition: ease 1ms;
   transform: scale(1.1, 1.1);
@@ -202,7 +173,7 @@ styles for navbar
   right: 0;
   left: 0;
   width: 100%;
-  background-color: #252525;
+  background-color: #252525ee;
   display: none;
   transition: ease-in 300ms;
 }
@@ -215,13 +186,9 @@ styles for navbar
   letter-spacing: 1px;
   cursor: pointer;
   transition: ease 1ms;
-}
-
-.dropdown > p > a:hover {
-  color: white;
-}
-
-.dropdown > p > a {
-  text-decoration: none;
   color: #ff4d4d;
+}
+
+.dropdown > p:hover {
+  color: white;
 }
