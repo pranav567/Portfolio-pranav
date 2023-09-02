@@ -51,6 +51,7 @@ styles for navbar
 .logo-img-sm {
   transition: ease 1s;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .path-no-animation {
