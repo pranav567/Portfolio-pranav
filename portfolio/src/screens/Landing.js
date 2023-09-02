@@ -3,6 +3,8 @@ import "../styles/landing.css";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
 import About from "../components/About";
+import Experience from "../components/Experience";
+import Projects from "../components/Projects";
 const Landing = () => {
   const [windowSize, setwindowSize] = useState(window.innerWidth);
 
@@ -37,6 +39,8 @@ const Landing = () => {
       <div className="otherComponents">
         <Home />
         <About />
+        <Experience />
+        <Projects />
       </div>
     </React.Fragment>
   );
