@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/experience.css";
+import { InView } from "react-intersection-observer";
+
 const Experience = React.forwardRef((props, ref) => {
   const [windowSize, setwindowSize] = useState(window.innerWidth);
 
@@ -30,9 +32,16 @@ const Experience = React.forwardRef((props, ref) => {
   return (
     <React.Fragment>
       <div ref={ref} className="exp-container">
-        <div className={windowSize > 700 ? "exp-header" : "exp-header-sm"}>
-          Experience
-        </div>
+        <InView>
+          {({ inView, ref }) => (
+            <div
+              ref={ref}
+              className={inView ? "exp-header exp-header-anim" : "exp-header"}
+            >
+              Experience
+            </div>
+          )}
+        </InView>
         <div
           className={
             windowSize > 1000
@@ -56,48 +65,73 @@ const Experience = React.forwardRef((props, ref) => {
             >
               {workExp.map((obj, ind) => (
                 <div key={ind} className="work">
-                  <div className="workStick-box">
-                    <div className="stick"></div>
-                    <div className="work-circle"></div>
-                  </div>
-                  <div className="content-box">
-                    <div
-                      className={
-                        windowSize > 600 ? "company-name" : "company-name-sm"
-                      }
-                    >
-                      {obj.companyName}
-                    </div>
-                    <div
-                      className={
-                        windowSize > 600 ? "company-role" : "company-role-sm"
-                      }
-                    >
-                      {obj.role}
-                    </div>
-                    <div
-                      className={
-                        windowSize > 600
-                          ? "company-duration"
-                          : "company-duration-sm"
-                      }
-                    >
-                      {obj.duration}
-                    </div>
-                    <div
-                      className={
-                        windowSize > 600
-                          ? "company-responsibility"
-                          : "company-responsibility-sm"
-                      }
-                    >
-                      <ul>
-                        {obj.responsibility.map((obj2, ind2) => (
-                          <li key={ind2}>{obj2}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  <InView>
+                    {({ inView, ref }) => (
+                      <div ref={ref} className="workStick-box">
+                        <div className="stick"></div>
+                        <div
+                          className={
+                            inView
+                              ? "work-circle work-circle-anim"
+                              : "work-circle"
+                          }
+                        ></div>
+                      </div>
+                    )}
+                  </InView>
+                  <InView>
+                    {({ inView, ref }) => (
+                      <div
+                        ref={ref}
+                        className={
+                          inView
+                            ? "content-box content-box-anim"
+                            : "content-box"
+                        }
+                      >
+                        <div
+                          className={
+                            windowSize > 600
+                              ? "company-name"
+                              : "company-name-sm"
+                          }
+                        >
+                          {obj.companyName}
+                        </div>
+                        <div
+                          className={
+                            windowSize > 600
+                              ? "company-role"
+                              : "company-role-sm"
+                          }
+                        >
+                          {obj.role}
+                        </div>
+                        <div
+                          className={
+                            windowSize > 600
+                              ? "company-duration"
+                              : "company-duration-sm"
+                          }
+                        >
+                          {obj.duration}
+                        </div>
+                        <div
+                          className={
+                            windowSize > 600
+                              ? "company-responsibility"
+                              : "company-responsibility-sm"
+                          }
+                        >
+                          <ul>
+                            {obj.responsibility.map((obj2, ind2) => (
+                              <li key={ind2}>{obj2}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </InView>
                 </div>
               ))}
             </div>

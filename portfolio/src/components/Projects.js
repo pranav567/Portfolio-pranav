@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import "../styles/projects.css";
+import { InView } from "react-intersection-observer";
 
 import expense from "../assets/svg/expense.svg";
 import movie from "../assets/svg/movie.svg";
@@ -90,107 +91,123 @@ const Projects = React.forwardRef((props, ref) => {
         </div>
         {windowSize >= 1000 ? (
           <div className="proj-content">
-            <div className="proj-left">
-              <div
-                style={
-                  projectCurrent === 0
-                    ? {
-                        color: "#ff4d4d",
-                        fontWeight: "bold",
-                        letterSpacing: "1px",
-                        boxShadow: "2px 2px 2px #939393",
-                        fontSize: "1.5rem",
-                      }
-                    : {}
-                }
-                onClick={() => {
-                  handleProjectChange(0);
-                }}
-              >
-                Expense Management App
-              </div>
-              <div
-                style={
-                  projectCurrent === 1
-                    ? {
-                        color: "#ff4d4d",
-                        fontWeight: "bold",
-                        letterSpacing: "1px",
-                        boxShadow: "2px 2px 2px #939393",
-                        fontSize: "1.5rem",
-                      }
-                    : {}
-                }
-                onClick={() => {
-                  handleProjectChange(1);
-                }}
-              >
-                Movie Recommender System
-              </div>
-              <div
-                style={
-                  projectCurrent === 2
-                    ? {
-                        color: "#ff4d4d",
-                        fontWeight: "bold",
-                        letterSpacing: "1px",
-                        boxShadow: "2px 2px 2px #939393",
-                        fontSize: "1.5rem",
-                      }
-                    : {}
-                }
-                onClick={() => {
-                  handleProjectChange(2);
-                }}
-              >
-                License Number Extraction
-              </div>
-              <div
-                style={
-                  projectCurrent === 3
-                    ? {
-                        color: "#ff4d4d",
-                        fontWeight: "bold",
-                        letterSpacing: "1px",
-                        boxShadow: "2px 2px 2px #939393",
-                        fontSize: "1.5rem",
-                      }
-                    : {}
-                }
-                onClick={() => {
-                  handleProjectChange(3);
-                }}
-              >
-                BlackJack game app
-              </div>
-            </div>
-            <div className="proj-right">
-              {Object.keys(projects).map((obj, ind) => (
+            <InView>
+              {({ inView, ref }) => (
                 <div
-                  key={ind}
-                  ref={projects[obj]["reff"]}
-                  className={`project-${ind}`}
+                  ref={ref}
+                  className={inView ? "proj-left proj-left-anim" : "proj-left"}
                 >
-                  <div className="project-svg">
-                    <object
-                      aria-label="Immage"
-                      type="image/svg+xml"
-                      data={projects[obj]["svg"]}
-                    ></object>
+                  <div
+                    style={
+                      projectCurrent === 0
+                        ? {
+                            color: "#ff4d4d",
+                            fontWeight: "bold",
+                            letterSpacing: "1px",
+                            boxShadow: "2px 2px 2px #939393",
+                            fontSize: "1.5rem",
+                          }
+                        : {}
+                    }
+                    onClick={() => {
+                      handleProjectChange(0);
+                    }}
+                  >
+                    Expense Management App
                   </div>
-                  <div className="project-details">
-                    <div className="project-about">
-                      <span>About : </span>
-                      {projects[obj]["about"]}
-                    </div>
-                    <div className="project-stack">
-                      <span>Stack : </span>
-                      {projects[obj]["stack"]}
-                    </div>
+                  <div
+                    style={
+                      projectCurrent === 1
+                        ? {
+                            color: "#ff4d4d",
+                            fontWeight: "bold",
+                            letterSpacing: "1px",
+                            boxShadow: "2px 2px 2px #939393",
+                            fontSize: "1.5rem",
+                          }
+                        : {}
+                    }
+                    onClick={() => {
+                      handleProjectChange(1);
+                    }}
+                  >
+                    Movie Recommender System
+                  </div>
+                  <div
+                    style={
+                      projectCurrent === 2
+                        ? {
+                            color: "#ff4d4d",
+                            fontWeight: "bold",
+                            letterSpacing: "1px",
+                            boxShadow: "2px 2px 2px #939393",
+                            fontSize: "1.5rem",
+                          }
+                        : {}
+                    }
+                    onClick={() => {
+                      handleProjectChange(2);
+                    }}
+                  >
+                    License Number Extraction
+                  </div>
+                  <div
+                    style={
+                      projectCurrent === 3
+                        ? {
+                            color: "#ff4d4d",
+                            fontWeight: "bold",
+                            letterSpacing: "1px",
+                            boxShadow: "2px 2px 2px #939393",
+                            fontSize: "1.5rem",
+                          }
+                        : {}
+                    }
+                    onClick={() => {
+                      handleProjectChange(3);
+                    }}
+                  >
+                    BlackJack game app
                   </div>
                 </div>
-              ))}
-            </div>
+              )}
+            </InView>
+            <InView>
+              {({ inView, ref }) => (
+                <div
+                  ref={ref}
+                  className={
+                    inView ? "proj-right proj-right-anim" : "proj-right"
+                  }
+                >
+                  {Object.keys(projects).map((obj, ind) => (
+                    <div
+                      key={ind}
+                      ref={projects[obj]["reff"]}
+                      className={`project-${ind}`}
+                    >
+                      <div className="project-svg">
+                        <object
+                          aria-label="Immage"
+                          type="image/svg+xml"
+                          data={projects[obj]["svg"]}
+                        ></object>
+                      </div>
+                      <div className="project-details">
+                        <div className="project-about">
+                          <span>About : </span>
+                          {projects[obj]["about"]}
+                        </div>
+                        <div className="project-stack">
+                          <span>Stack : </span>
+                          {projects[obj]["stack"]}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </InView>
           </div>
         ) : windowSize >= 600 ? (
           <div className="proj-content-md">

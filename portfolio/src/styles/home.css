@@ -40,16 +40,11 @@ home page css
   stroke-dasharray: 600;
   stroke-dashoffset: 0;
   fill: none;
-  animation: codeSvgAnimation 1s ease-in;
   stroke: #ffffff;
-  transition: ease 300ms;
-}
-.code-svg:hover {
-  filter: drop-shadow(0px 1px 3px white);
 }
 
-.code-svg:hover .code-svg-path {
-  stroke: #65c265;
+.code-svg-path-anim {
+  animation: codeSvgAnimation 1s ease-in;
 }
 
 @keyframes codeSvgAnimation {
@@ -59,6 +54,14 @@ home page css
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.code-svg:hover {
+  filter: drop-shadow(0px 1px 3px white);
+}
+
+.code-svg:hover .code-svg-path {
+  stroke: #65c265;
 }
 .right-box,
 .box-sm {
@@ -71,7 +74,7 @@ home page css
   justify-content: center;
   align-items: flex-start;
   background: transparent;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(01px);
 }
 
 .box-sm {
@@ -106,6 +109,8 @@ home page css
   border-right: 0.1rem solid transparent;
   overflow: hidden;
   margin-left: 20px;
+}
+.my-name-animate {
   animation: typingName 3s steps(30, end), blink-caret 0.75s step-end 4;
 }
 

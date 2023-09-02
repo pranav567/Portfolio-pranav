@@ -10,9 +10,8 @@
   background-color: #ecd9bf;
 }
 
-.exp-header,
-.exp-header-sm {
-  margin-top: 100px;
+.exp-header {
+  margin-top: 80px;
   width: 100%;
   text-align: center;
   font-size: 4rem;
@@ -21,10 +20,9 @@
   letter-spacing: 5px;
   font-weight: bold;
   overflow: hidden;
-  animation: headerExp 3s ease;
 }
-.exp-header-sm {
-  margin-top: 70px;
+.exp-header-anim {
+  animation: headerExp 3s ease;
 }
 
 @keyframes headerExp {
@@ -102,6 +100,7 @@
 }
 
 .workStick-box {
+  position: relative;
   width: 10%;
   height: 100%;
   display: flex;
@@ -128,6 +127,18 @@
   transform: translateX(-7px) scale(1.2, 1.2);
 }
 
+.work-circle-anim {
+  animation: circleAnim 1s ease-in;
+}
+@keyframes circleAnim {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 0;
+  }
+}
+
 .content-box {
   margin-left: 30px;
   width: 90%;
@@ -136,12 +147,25 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.content-box-anim {
+  animation: contentBoxAnim 1s ease-in;
+}
+
+@keyframes contentBoxAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .company-name,
 .company-name-sm {
   font-size: 1.3rem;
   color: #ff4d4d;
   font-family: Teko;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-weight: bold;
 }
 .company-name-sm {
