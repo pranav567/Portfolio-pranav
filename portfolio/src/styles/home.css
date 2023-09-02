@@ -1,0 +1,161 @@
+/* 
+home page css
+*/
+
+.home-container,
+.home-container-sm {
+  user-select: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.home-container-sm {
+  position: relative;
+  top: 0;
+  background: transparent;
+  background-image: none;
+  justify-content: center;
+}
+.left-box {
+  position: relative;
+  left: 0%;
+  width: 50%;
+  height: 50vh;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.code-svg {
+  position: relative;
+  right: 10%;
+  transition: ease 300ms;
+}
+.code-svg-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 0;
+  fill: none;
+  stroke: #ffffff;
+}
+
+.code-svg-path-anim {
+  animation: codeSvgAnimation 1s ease-in;
+}
+
+@keyframes codeSvgAnimation {
+  from {
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.code-svg:hover {
+  filter: drop-shadow(0px 1px 3px white);
+}
+
+.code-svg:hover .code-svg-path {
+  stroke: #65c265;
+}
+.right-box,
+.box-sm {
+  position: relative;
+  right: 0%;
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: transparent;
+  backdrop-filter: blur(01px);
+}
+
+.box-sm {
+  width: 100%;
+  align-items: center;
+}
+
+.name-header,
+.title-sub-header,
+.name-header-sm,
+.title-sub-header-sm {
+  position: relative;
+  left: 5%;
+  color: white;
+  font-family: Teko;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+.name-header,
+.name-header-sm {
+  top: -5%;
+  font-size: 4rem;
+}
+.name-header-sm {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.my-name {
+  border-right: 0.1rem solid transparent;
+  overflow: hidden;
+  margin-left: 20px;
+}
+.my-name-animate {
+  animation: typingName 3s steps(30, end), blink-caret 0.75s step-end 4;
+}
+
+@keyframes typingName {
+  from {
+    width: 0;
+  }
+  to {
+    width: 150px;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.title-sub-header,
+.title-sub-header-sm {
+  color: #ffffffd7;
+  top: -5%;
+  font-size: 1.3rem;
+}
+.title-sub-header-sm {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+}
+
+.name-header-sm,
+.title-sub-header-sm {
+  width: 70%;
+  text-align: left;
+}
+
+.name-header > span:hover {
+  color: #ff4d4d;
+  cursor: none;
+}
+
+.my-name > span {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+}
