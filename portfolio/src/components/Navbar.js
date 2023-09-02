@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 
 const Navbar = () => {
-  const circleRef = useRef(null);
   const svgRef = useRef(null);
   const logoRef = useRef(null);
   const pathRef = useRef(null);
