@@ -7,7 +7,7 @@ import movie from "../assets/svg/movie.svg";
 import blackjack from "../assets/svg/blackjack.svg";
 import license from "../assets/svg/license.svg";
 
-const Projects = () => {
+const Projects = React.forwardRef((props, ref) => {
   const [windowSize, setwindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -84,7 +84,7 @@ const Projects = () => {
 
   return (
     <React.Fragment>
-      <div className="proj-container">
+      <div ref={ref} className="proj-container">
         <div className={windowSize > 700 ? "proj-header" : "proj-header-sm"}>
           Projects
         </div>
@@ -369,6 +369,6 @@ const Projects = () => {
       </div>
     </React.Fragment>
   );
-};
+});
 
 export default Projects;

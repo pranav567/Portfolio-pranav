@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/experience.css";
-const Experience = () => {
+const Experience = React.forwardRef((props, ref) => {
   const [windowSize, setwindowSize] = useState(window.innerWidth);
 
   const workExp = [
@@ -29,7 +29,7 @@ const Experience = () => {
   }, [windowSize]);
   return (
     <React.Fragment>
-      <div className="exp-container">
+      <div ref={ref} className="exp-container">
         <div className={windowSize > 700 ? "exp-header" : "exp-header-sm"}>
           Experience
         </div>
@@ -448,6 +448,6 @@ const Experience = () => {
       </div>
     </React.Fragment>
   );
-};
+});
 
 export default Experience;

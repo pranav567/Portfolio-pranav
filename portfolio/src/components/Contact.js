@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/contact.css";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
-const Contact = () => {
+const Contact = React.forwardRef((props, ref) => {
   const [device, setdevice] = useState("desktop");
   const toastSuccessRef = useRef(null);
   const toastErrorRef = useRef(null);
@@ -54,7 +54,7 @@ const Contact = () => {
           <div className="sm-box"></div>
         </div>
       </div>
-      <div className="contact-div">
+      <div ref={ref} className="contact-div">
         <div className="contact-inner-div">
           <div className="heading">Get In Touch!</div>
           <div className="sub-heading">
@@ -99,6 +99,6 @@ const Contact = () => {
       </div>
     </React.Fragment>
   );
-};
+});
 
 export default Contact;

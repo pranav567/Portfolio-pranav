@@ -33,19 +33,19 @@ styles for navbar
 .logo-img,
 .logo-img-sm {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 10%;
-  width: 80px;
-  height: 80px;
-  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
   background: transparent;
   transition: ease 1s;
   border-radius: 10%;
 }
 .logo-img-sm {
   left: 15%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 .logo-img:hover,
 .logo-img-sm {
@@ -84,13 +84,10 @@ styles for navbar
 .other-headers-sm {
   width: 50%;
   font-family: TulpenOne;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ff4d4d;
   letter-spacing: 2px;
-}
-.sm-font {
-  font-size: 1.5rem;
 }
 .other-headers {
   display: flex;

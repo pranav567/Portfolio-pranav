@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/about.css";
 import myImage from "../assets/images/myImage.png";
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
   const [windowSize, setwindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const About = () => {
   }, [windowSize]);
   return (
     <React.Fragment>
-      <div className="about-container">
+      <div ref={ref} className="about-container">
         {windowSize > 700 ? (
           <>
             <div className="about-header">Bit About me!</div>
@@ -87,6 +87,6 @@ const About = () => {
       </div>
     </React.Fragment>
   );
-};
+});
 
 export default About;
