@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import AllRoutes from "./routes/AllRoutes";
+import { inject } from "@vercel/analytics";
 
 function App() {
   return (
@@ -10,3 +11,4 @@ function App() {
 }
 
 export default App;
+inject();
