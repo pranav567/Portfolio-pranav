@@ -19,7 +19,7 @@ const About = React.forwardRef((props, ref) => {
       <div ref={ref} className="about-container">
         {windowSize > 700 ? (
           <>
-            <div className="about-header">Bit About me!</div>
+            <div className="about-header">About me!</div>
             <div className="about-image">
               <img className="my-image" src={myImage} alt="Me" />
             </div>
@@ -52,7 +52,7 @@ const About = React.forwardRef((props, ref) => {
           </>
         ) : (
           <>
-            <div className="about-header-sm">Bit About me!</div>
+            <div className="about-header-sm">About me!</div>
             <div className="about-image-sm">
               <img className="my-image-sm" src={myImage} alt="Me" />
             </div>
