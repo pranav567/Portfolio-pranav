@@ -83,6 +83,57 @@ const Projects = React.forwardRef((props, ref) => {
     },
   };
 
+  const [currentTouch, setCurrentTouch] = useState(null);
+  const handleTouchStart = (eve) => {
+    const boxBottom = document.querySelector(".proj-bottom");
+    if (boxBottom) {
+      const getBoxBottom = boxBottom.getBoundingClientRect();
+      let touchX = eve.touches[0].clientX;
+      let touchY = eve.touches[0].clientY;
+      if (
+        touchX > getBoxBottom.left &&
+        touchX < getBoxBottom.right &&
+        touchY > getBoxBottom.top &&
+        touchY < getBoxBottom.bottom
+      )
+        setCurrentTouch({ x: touchX, y: touchY });
+    }
+  };
+  const handleTouchEnd = (eve) => {
+    const boxBottom = document.querySelector(".proj-bottom");
+    if (boxBottom) {
+      const getBoxBottom = boxBottom.getBoundingClientRect();
+      let touchX = eve.changedTouches[0].clientX;
+      let touchY = eve.changedTouches[0].clientY;
+      if (
+        touchX > getBoxBottom.left &&
+        touchX < getBoxBottom.right &&
+        touchY > getBoxBottom.top &&
+        touchY < getBoxBottom.bottom &&
+        currentTouch !== null
+      ) {
+        //for left swipe touchX < currentTouch.x
+        //for Right swipe touchX > currentTouch.x
+        if (Math.abs(touchX - currentTouch.x) > 50) {
+          if (touchX - currentTouch.x > 0) {
+            //right swipe decrease count
+            if (projectCurrent > 0) {
+              setprojectCurrent(projectCurrent - 1);
+              handleProjectChange(projectCurrent - 1);
+            }
+          } else {
+            //left swipe increase count
+            if (projectCurrent < 3) {
+              setprojectCurrent(projectCurrent + 1);
+              handleProjectChange(projectCurrent + 1);
+            }
+          }
+        }
+        setCurrentTouch(null);
+      }
+    }
+  };
+
   return (
     <React.Fragment>
       <div ref={ref} className="proj-container">
@@ -289,7 +340,11 @@ const Projects = React.forwardRef((props, ref) => {
                 BlackJack game app
               </div>
             </div>
-            <div className="proj-bottom">
+            <div
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              className="proj-bottom"
+            >
               {Object.keys(projects).map((obj, ind) => (
                 <div
                   key={ind}
@@ -356,7 +411,11 @@ const Projects = React.forwardRef((props, ref) => {
                 />
               </div>
             </div>
-            <div className="proj-bottom">
+            <div
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              className="proj-bottom"
+            >
               {Object.keys(projects).map((obj, ind) => (
                 <div
                   key={ind}
